@@ -1,0 +1,178 @@
+/* Filename: \Include\Css\Main.css */
+
+/* montserrat-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('montserrat-v31-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* montserrat-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: url('montserrat-v31-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff;
+  color: #222;
+  line-height: 1.4;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  margin-bottom: 12px;
+}
+
+.logo-menu{
+	display: flex; 
+	align-items: center;
+}
+
+/* Announcement block start */
+.custom-fieldset {
+  border: 2px solid #114040; /* This creates the outer border */
+  border-radius: 5px; /* Optional: adds rounded corners */
+  padding: 20px;
+  position: relative; /* This is crucial for positioning the "legend" */
+  margin: 40px auto; /* Centers the whole container on the page */
+  max-width: 900px;
+}
+
+.custom-legend {
+  position: absolute; /* Takes the element out of the normal flow */
+  top: 0;
+  left: 50%; /* Centers the left edge of the legend on the container */
+  transform: translate(-50%, -50%); /* Moves the legend back by half its own width and height */
+  padding: 0 10px;
+  background-color: white; /* Matches the background so it "breaks" the border */
+  z-index: 1; /* Ensures the legend is on top of the border */
+}
+
+.legend-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #114040;
+  text-align: center;
+  margin: 0; /* Resets default margin on the heading */
+}
+
+.fieldset-content {
+  margin-top: 10px;
+}
+/* Announcement block end */
+
+main {
+	max-width: 900px;
+	justify-items: center;  
+	margin: 0 auto 40px;
+}
+
+a, a:link, a:visited {
+  color: #114040;
+  outline-offset: 2px;
+  text-decoration: none;
+  font-weight:bold;
+}
+
+a:hover, a:focus {
+  color: #6d602b;
+  outline-offset: 2px;
+  text-decoration: underline;
+}
+
+
+.allCentered
+{
+	justify-items: center;
+	align-items: center;
+	text-align: center;	
+}
+	
+.banner {
+  margin: 20px 0 34px;
+  background-color: #114040;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;
+  gap: 14px;
+  flex-wrap: wrap;
+  border-radius: 3px;
+}
+
+.banner .banner-text {
+  flex-grow: 1;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.footer {
+  font-size: 10pt;
+  padding: 10px;
+  margin: 10px;
+  background-color: #114040;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;    
+  flex-wrap: wrap;
+  border-radius: 3px;
+}
+
+/* ===== MEDIA QUERY ===== */
+@media (max-width: 510px) {
+  main {
+	width: 100%;
+    max-width: 510px;  
+  }
+  
+  .logo-menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .logo-menu img {
+    max-width: 100%;
+  }
+  
+  .main-menu-p {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .banner {
+    flex-direction: column;
+    row-gap: 12px;
+    text-align: center;
+  }
+
+  .banner .banner-text {
+    order: 3;
+  }
+
+  .social-media img,
+  .footer-images img {
+    max-width: 70px;
+    height: auto;
+    margin: 6px;
+  }
+}
+/* ===== MEDIA QUERY END =====*/
